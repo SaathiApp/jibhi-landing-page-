@@ -1,57 +1,37 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 
-import { LocaleSwitcher } from '@/components/LocaleSwitcher';
-import { buttonVariants } from '@/components/ui/buttonVariants';
-import { CenteredMenu } from '@/features/landing/CenteredMenu';
-import { Section } from '@/features/landing/Section';
-
-import { Logo } from './Logo';
-
-export const Navbar = () => {
-  const t = useTranslations('Navbar');
-
-  return (
-    <Section className="px-3 py-6">
-      <CenteredMenu
-        logo={<Logo />}
-        rightMenu={(
-          <>
-            {/* PRO: Dark mode toggle button */}
-            <li data-fade>
-              <LocaleSwitcher />
-            </li>
-            <li className="ml-1 mr-2.5" data-fade>
-              <Link href="/sign-in">{t('sign_in')}</Link>
-            </li>
-            <li>
-              <Link className={buttonVariants()} href="/sign-up">
-                {t('sign_up')}
-              </Link>
-            </li>
-          </>
-        )}
-      >
-        <li>
-          <Link href="/sign-up">{t('product')}</Link>
-        </li>
-
-        <li>
-          <Link href="/sign-up">{t('docs')}</Link>
-        </li>
-
-        <li>
-          <Link href="/sign-up">{t('blog')}</Link>
-        </li>
-
-        <li>
-          <Link href="/sign-up">{t('community')}</Link>
-        </li>
-
-        <li>
-          <Link href="/sign-up">{t('company')}</Link>
-        </li>
-      </CenteredMenu>
-    </Section>
-  );
-};
+export const Navbar = () => (
+  <nav className="w-full bg-transparent font-inter text-[#22225a]">
+    <div className="mx-auto grid h-16 max-w-6xl grid-cols-3 items-center px-4">
+      {/* Logo + Brand (left) */}
+      <Link href="/" className="flex select-none items-center gap-2">
+        <Image
+          src="/assets/images/jibhi-logo.png"
+          alt="Jibhi.ai"
+          width={26}
+          height={26}
+          className="size-7"
+          priority
+        />
+        <span className="text-lg font-semibold tracking-tight">Jibhi.ai</span>
+      </Link>
+      {/* Nav Links (centered) */}
+      <div className="flex items-center justify-center gap-7 text-base font-normal">
+        <a href="#how" className="transition-colors hover:text-[#605CD4]">How it works</a>
+        <a href="#benefits" className="transition-colors hover:text-[#605CD4]">Benefits</a>
+        <a href="#faq" className="transition-colors hover:text-[#605CD4]">FAQ</a>
+      </div>
+      {/* CTA (right) */}
+      <div className="flex justify-end">
+        <Link
+          href="#hero"
+          className="rounded-full border border-[#605CD4] bg-white/80 px-5 py-1.5 font-semibold text-[#605CD4] transition-colors hover:bg-[#605CD4] hover:text-white"
+          style={{ boxShadow: 'none' }}
+        >
+          Get Started
+        </Link>
+      </div>
+    </div>
+  </nav>
+);

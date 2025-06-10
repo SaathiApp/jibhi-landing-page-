@@ -1,135 +1,72 @@
-import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { FaRegCheckCircle, FaRegClock, FaRegCompass, FaRegHeart } from 'react-icons/fa';
 
-import { Background } from '@/components/Background';
-import { FeatureCard } from '@/features/landing/FeatureCard';
-import { Section } from '@/features/landing/Section';
-
-export const Features = () => {
-  const t = useTranslations('Features');
-
+export function Features() {
   return (
-    <Background>
-      <Section
-        subtitle={t('section_subtitle')}
-        title={t('section_title')}
-        description={t('section_description')}
-      >
-        <div className="grid grid-cols-1 gap-x-3 gap-y-8 md:grid-cols-3">
-          <FeatureCard
-            icon={(
-              <svg
-                className="stroke-primary-foreground stroke-2"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M0 0h24v24H0z" stroke="none" />
-                <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
-              </svg>
-            )}
-            title={t('feature1_title')}
-          >
-            {t('feature_description')}
-          </FeatureCard>
-
-          <FeatureCard
-            icon={(
-              <svg
-                className="stroke-primary-foreground stroke-2"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M0 0h24v24H0z" stroke="none" />
-                <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
-              </svg>
-            )}
-            title={t('feature2_title')}
-          >
-            {t('feature_description')}
-          </FeatureCard>
-
-          <FeatureCard
-            icon={(
-              <svg
-                className="stroke-primary-foreground stroke-2"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M0 0h24v24H0z" stroke="none" />
-                <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
-              </svg>
-            )}
-            title={t('feature3_title')}
-          >
-            {t('feature_description')}
-          </FeatureCard>
-
-          <FeatureCard
-            icon={(
-              <svg
-                className="stroke-primary-foreground stroke-2"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M0 0h24v24H0z" stroke="none" />
-                <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
-              </svg>
-            )}
-            title={t('feature4_title')}
-          >
-            {t('feature_description')}
-          </FeatureCard>
-
-          <FeatureCard
-            icon={(
-              <svg
-                className="stroke-primary-foreground stroke-2"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M0 0h24v24H0z" stroke="none" />
-                <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
-              </svg>
-            )}
-            title={t('feature5_title')}
-          >
-            {t('feature_description')}
-          </FeatureCard>
-
-          <FeatureCard
-            icon={(
-              <svg
-                className="stroke-primary-foreground stroke-2"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M0 0h24v24H0z" stroke="none" />
-                <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
-              </svg>
-            )}
-            title={t('feature6_title')}
-          >
-            {t('feature_description')}
-          </FeatureCard>
+    <section id="benefits" className="bg-gray-50 py-20 font-inter">
+      <div className="mx-auto max-w-5xl px-6">
+        <h2 className="mb-12 text-center text-3xl font-bold text-[#22225a]">How Jibhi Works</h2>
+        {/* Stepper */}
+        <div className="mb-16 flex flex-col gap-12 md:flex-row md:justify-center md:gap-8">
+          <div className="flex flex-col items-center text-center md:w-1/3">
+            <div className="mb-4 flex size-12 items-center justify-center rounded-full bg-[#e7e7fb] shadow">
+              <FaRegCompass className="size-7 text-[#605CD4]" />
+            </div>
+            <h3 className="mb-2 text-lg font-bold">Tell us your dream trip</h3>
+            <p className="text-base text-gray-600">
+              Share your destination, dates, and vibe—or just a voice note.
+            </p>
+          </div>
+          <div className="flex flex-col items-center text-center md:w-1/3">
+            <div className="mb-4 flex size-12 items-center justify-center rounded-full bg-[#e7e7fb] shadow">
+              <FaRegClock className="size-7 text-[#605CD4]" />
+            </div>
+            <h3 className="mb-2 text-lg font-bold">AI plans while you sleep</h3>
+            <p className="text-base text-gray-600">
+              Jibhi scans thousands of options and crafts your perfect itinerary in minutes.
+            </p>
+          </div>
+          <div className="flex flex-col items-center text-center md:w-1/3">
+            <div className="mb-4 flex size-12 items-center justify-center rounded-full bg-[#e7e7fb] shadow">
+              <FaRegCheckCircle className="size-7 text-[#605CD4]" />
+            </div>
+            <h3 className="mb-2 text-lg font-bold">Book in one tap</h3>
+            <p className="text-base text-gray-600">
+              Flights, hotels, experiences—all booked. You just wake up and review.
+            </p>
+          </div>
         </div>
-      </Section>
-    </Background>
+        {/* Feature cards */}
+        <div className="mt-6 grid gap-8 md:grid-cols-3">
+          <div className="flex flex-col items-center rounded-xl bg-white p-7 text-center shadow-md">
+            <FaRegHeart className="mb-3 size-7 text-[#605CD4]" />
+            <h4 className="mb-2 text-lg font-semibold">100% Personal</h4>
+            <p className="text-sm text-gray-600">
+              No templates or generic plans. Every itinerary is crafted just for you.
+            </p>
+          </div>
+          <div className="flex flex-col items-center rounded-xl bg-white p-7 text-center shadow-md">
+            <FaRegClock className="mb-3 size-7 text-[#605CD4]" />
+            <h4 className="mb-2 text-lg font-semibold">Saves 12+ Hours</h4>
+            <p className="text-sm text-gray-600">
+              AI does all the research. You save days of scrolling and stressing.
+            </p>
+          </div>
+          <div className="flex flex-col items-center rounded-xl bg-white p-7 text-center shadow-md">
+            <FaRegCheckCircle className="mb-3 size-7 text-[#605CD4]" />
+            <h4 className="mb-2 text-lg font-semibold">Book Everything, Instantly</h4>
+            <p className="text-sm text-gray-600">
+              All your bookings, confirmations, and custom picks—in one click.
+            </p>
+          </div>
+        </div>
+        {/* Gallery */}
+        <div className="mt-16 flex flex-wrap justify-center gap-4">
+          <Image src="/assets/images/dubai.jpg" alt="Dubai" width={170} height={110} className="rounded-xl shadow" />
+          <Image src="/assets/images/switzerland.jpg" alt="Switzerland" width={170} height={110} className="rounded-xl shadow" />
+          <Image src="/assets/images/venice.jpg" alt="Venice" width={170} height={110} className="rounded-xl shadow" />
+        </div>
+      </div>
+    </section>
   );
-};
+}

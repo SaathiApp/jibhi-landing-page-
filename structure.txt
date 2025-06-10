@@ -1,0 +1,52 @@
+.
+├── CHANGELOG.md
+├── LICENSE
+├── README.md
+├── checkly.config.ts
+├── codecov.yml
+├── commitlint.config.ts
+├── components.json
+├── crowdin.yml
+├── drizzle.config.ts
+├── eslint.config.mjs
+├── lint-staged.config.js
+├── migrations
+│   ├── 0000_init-db.sql
+│   └── meta
+├── next-env.d.ts
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── playwright.config.ts
+├── postcss.config.js
+├── public
+│   ├── apple-touch-icon.png
+│   ├── assets
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   └── favicon.ico
+├── sentry.client.config.ts
+├── src
+│   ├── app
+│   ├── components
+│   ├── features
+│   ├── hooks
+│   ├── instrumentation.ts
+│   ├── libs
+│   ├── locales
+│   ├── middleware.ts
+│   ├── models
+│   ├── styles
+│   ├── templates
+│   ├── types
+│   └── utils
+├── structure.txt
+├── tailwind.config.ts
+├── tests
+│   ├── e2e
+│   └── integration
+├── tsconfig.json
+├── vitest-setup.ts
+└── vitest.config.mts
+
+20 directories, 30 files

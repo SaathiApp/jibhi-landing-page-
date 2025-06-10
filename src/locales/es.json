@@ -1,0 +1,63 @@
+{
+  "Index": {
+    "meta_title": "Jibhi.ai — Planea tu viaje soñado, al instante. Asistente de viajes con IA para viajeros urbanos.",
+    "meta_description": "Jibhi.ai es tu planificador de viajes con IA: crea itinerarios a medida, reserva todo y recibe soporte 24/7. Ya es la opción elegida por viajeros de Mumbai, Dubái y San Francisco."
+  },
+  "Navbar": {
+    "sign_in": "Iniciar sesión",
+    "sign_up": "Registrarse",
+    "product": "Producto",
+    "docs": "Docs",
+    "blog": "Blog",
+    "community": "Comunidad",
+    "company": "Empresa"
+  },
+  "Hero": {
+    "title": "Tu viaje soñado, reservado mientras duermes.",
+    "description": "Planificación y reserva con IA en minutos. Sin estrés, sin saturación de información. Solo ilusión.",
+    "primary_button": "Planear mi viaje gratis"
+  },
+  "Sponsors": {
+    "title": "Con la confianza de"
+  },
+  "Features": {
+    "section_subtitle": "Cómo funciona Jibhi",
+    "section_title": "Viaja mejor, con menos esfuerzo",
+    "section_description": "Describe tu viaje. La IA planifica mientras duermes. Reserva en un solo clic.",
+    "feature1_title": "100% Personalizado",
+    "feature2_title": "Ahorra más de 12 horas",
+    "feature3_title": "Reserva todo, al instante",
+    "feature1_description": "Sin plantillas ni planes genéricos. Cada itinerario es solo para ti.",
+    "feature2_description": "La IA investiga por ti. Te ahorras días comparando y dudando.",
+    "feature3_description": "Reservas, confirmaciones y opciones especiales — en un clic."
+  },
+  "FAQ": {
+    "faq1_q": "¿En qué se diferencia Jibhi de MakeMyTrip o Booking.com?",
+    "faq1_a": "Jibhi planea y reserva todo tu viaje, 100% personalizado, en minutos. Sin resultados genéricos ni info abrumadora.",
+    "faq2_q": "¿Puedo confiar en la IA para reservar por mí?",
+    "faq2_a": "Sí. Jibhi solo reserva con socios verificados y te muestra todos los detalles antes de confirmar.",
+    "faq3_q": "¿Puedo cambiar o cancelar una reserva?",
+    "faq3_a": "Siempre tienes el control. Modifica o cancela fácilmente — nuestro equipo y la IA te ayudan.",
+    "faq4_q": "¿Tengo que pagar para probar Jibhi?",
+    "faq4_a": "No necesitas tarjeta. Planear es gratis. Solo pagas si reservas.",
+    "faq5_q": "¿Recibiré ayuda si tengo un problema en el extranjero?",
+    "faq5_a": "Por supuesto. Jibhi siempre te acompaña—soporte 24/7 por WhatsApp, chat o llamada.",
+    "faq6_q": "¿Mis datos están seguros?",
+    "faq6_a": "Sí. Usamos seguridad bancaria. Nunca vendemos ni compartimos tu información."
+  },
+  "CTA": {
+    "title": "¿Listo para tu próxima aventura?",
+    "description": "Únete a los 1,200+ viajeros que planifican mejor con Jibhi.",
+    "button_text": "Comenzar"
+  },
+  "Footer": {
+    "product": "Producto",
+    "docs": "Docs",
+    "blog": "Blog",
+    "community": "Comunidad",
+    "company": "Empresa",
+    "terms_of_service": "Términos de servicio",
+    "privacy_policy": "Política de privacidad",
+    "designed_by": "© Saathi Technologies Pvt Ltd. Todos los derechos reservados."
+  }
+}

@@ -1,28 +1,21 @@
-import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import { useTranslations } from 'next-intl';
-
-import { buttonVariants } from '@/components/ui/buttonVariants';
-import { CTABanner } from '@/features/landing/CTABanner';
-import { Section } from '@/features/landing/Section';
 
 export const CTA = () => {
   const t = useTranslations('CTA');
 
   return (
-    <Section>
-      <CTABanner
-        title={t('title')}
-        description={t('description')}
-        buttons={(
-          <a
-            className={buttonVariants({ variant: 'outline', size: 'lg' })}
-            href="https://github.com/ixartz/SaaS-Boilerplate"
-          >
-            <GitHubLogoIcon className="mr-2 size-5" />
-            {t('button_text')}
-          </a>
-        )}
-      />
-    </Section>
+    <section
+      id="cta"
+      className="flex w-full flex-col items-center justify-center bg-gradient-to-r from-[#605CD4] to-[#8A7FFF] px-4 py-16 text-center text-white"
+    >
+      <h2 className="mb-4 text-3xl font-bold">{t('title')}</h2>
+      <p className="mb-8 max-w-xl">{t('description')}</p>
+      <a
+        href="#hero"
+        className="rounded-full bg-white px-6 py-3 font-bold text-[#605CD4] transition hover:bg-gray-100"
+      >
+        {t('button_text')}
+      </a>
+    </section>
   );
 };

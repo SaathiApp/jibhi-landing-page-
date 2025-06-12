@@ -21,6 +21,7 @@ export const Navbar = () => (
         <a href="#how" className="transition-colors hover:text-[#605CD4]">How it works</a>
         <a href="#benefits" className="transition-colors hover:text-[#605CD4]">Benefits</a>
         <a href="#faq" className="transition-colors hover:text-[#605CD4]">FAQ</a>
+        <a href="/blog" className="transition-colors hover:text-[#605CD4]">Blog</a>
       </div>
       {/* CTA (right) */}
       <div className="flex justify-end">

@@ -40,6 +40,12 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        brand: {
+          light: '#8077F3',
+          medium: '#A093FF',
+          dark: '#6A5ACD',
+          accent: '#7C7CFF',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',

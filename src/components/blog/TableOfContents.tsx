@@ -15,7 +15,10 @@ const TableOfContents = ({ headings }: Props) => {
   };
 
   return (
-    <nav className="mb-8 rounded-lg bg-gray-50 p-4" aria-label="Table of contents">
+    <nav
+      className="mb-8 rounded-lg bg-gray-50 p-4 lg:sticky lg:top-24 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto border border-slate-200"
+      aria-label="Table of contents"
+    >
       <h2 className="mb-2 text-lg font-semibold text-slate-800">Table of Contents</h2>
       <ul className="space-y-1 text-slate-700 text-sm">
         {headings.map(h => (

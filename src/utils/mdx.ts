@@ -41,12 +41,14 @@ function extractHeadings(content: string): Heading[] {
   return content
     .split('\n')
     .filter(line => /^#{1,6}\s/.test(line))
-    .map(line => {
+    .map((line) => {
       const match = line.match(/^(#{1,6})\s+(.*)/);
-      if (!match) return null;
-      const level = match[1].length;
-      const text = match[2].trim();
-      const id = slugify(text);
+      if (!match) {
+        return null;
+      }
+      const level = match[1]?.length;
+      const text = match[2]?.trim();
+      const id = slugify(text ?? '');
       return { text, id, level } as Heading;
     })
     .filter(Boolean) as Heading[];

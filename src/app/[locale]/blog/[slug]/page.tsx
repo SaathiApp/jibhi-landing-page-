@@ -17,13 +17,14 @@ export default function BlogPost({ params }: { params: { slug: string; locale: s
     <div className="container mx-auto px-4 py-8">
       <Link
         href={`/${params.locale}/blog`}
-        className="mb-8 inline-block text-blue-600 hover:text-blue-800"
+        className="mb-8 inline-block font-semibold text-brand-dark hover:text-brand-accent"
       >
         ← Back to Blog List
       </Link>
 
       <article className="prose lg:prose-xl mx-auto">
-        <h1 className="mb-4 text-4xl font-bold">{frontmatter.title}</h1>
+        <img src={frontmatter.image} alt="" className="mb-6 w-full rounded-lg" />
+        <h1 className="mb-4 text-4xl font-bold text-brand-dark">{frontmatter.title}</h1>
         <div className="mb-8 flex gap-4 text-gray-600">
           <span>
             By

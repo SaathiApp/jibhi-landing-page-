@@ -10,6 +10,7 @@ export type BlogFrontmatter = {
   date: string;
   description: string;
   author: string;
+  image: string;
   slug: string;
 };
 

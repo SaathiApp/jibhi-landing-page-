@@ -13,12 +13,12 @@ export default function BlogList({ params }: { params: { locale: string } }) {
           <Link
             key={blog.slug}
             href={`/${params.locale}/blog/${blog.slug}`}
-            className="overflow-hidden rounded-lg bg-white shadow-sm transition hover:shadow-md"
+            className="overflow-hidden rounded-lg bg-white shadow transition-shadow hover:shadow-lg border border-slate-100"
           >
             <article>
               <img src={blog.image} alt="" className="h-48 w-full object-cover" />
               <div className="p-6">
-                <h2 className="mb-2 text-2xl font-semibold text-brand-dark">{blog.title}</h2>
+                <h2 className="mb-2 text-2xl font-semibold text-brand-dark hover:text-brand-accent">{blog.title}</h2>
                 <p className="mb-4 text-gray-600">{blog.description}</p>
                 <div className="flex items-center justify-between text-sm text-gray-500">
                   <span>{blog.author}</span>

@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import TableOfContents from '@/components/blog/TableOfContents';
+import PostFAQ from '@/components/blog/PostFAQ';
+import { slugify } from '@/utils/mdx';
 
 import { getBlogBySlug, getBlogFiles } from '@/utils/mdx';
 
@@ -11,7 +14,17 @@ export async function generateStaticParams() {
 }
 
 export default function BlogPost({ params }: { params: { slug: string; locale: string } }) {
-  const { frontmatter, content } = getBlogBySlug(params.slug);
+  const { frontmatter, content, headings } = getBlogBySlug(params.slug);
+  const mdxComponents = {
+    h2: (props: any) => {
+      const text = String(props.children);
+      return <h2 id={slugify(text)} {...props} />;
+    },
+    h3: (props: any) => {
+      const text = String(props.children);
+      return <h3 id={slugify(text)} {...props} />;
+    },
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -34,9 +47,19 @@ export default function BlogPost({ params }: { params: { slug: string; locale: s
             {new Date(frontmatter.date).toLocaleDateString()}
           </time>
         </div>
+        <TableOfContents headings={headings} />
         <div className="mb-8">
-          <MDXRemote source={content} />
+          {
+            (() => {
+              try {
+                return <MDXRemote source={content} components={mdxComponents} />;
+              } catch {
+                return <p className="text-red-500">Failed to load content.</p>;
+              }
+            })()
+          }
         </div>
+        <PostFAQ faqs={frontmatter.faqs} />
       </article>
     </div>
   );

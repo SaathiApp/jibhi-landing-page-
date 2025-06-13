@@ -34,11 +34,11 @@ export default withSentryConfig(
           dirs: ['.'],
         },
         poweredByHeader: false,
-      reactStrictMode: true,
-      pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'md', 'mdx'],
-      experimental: {
-        serverComponentsExternalPackages: ['@electric-sql/pglite'],
-      },
+        reactStrictMode: true,
+        pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'md', 'mdx'],
+        experimental: {
+          serverComponentsExternalPackages: ['@electric-sql/pglite'],
+        },
       }),
     ),
   ),

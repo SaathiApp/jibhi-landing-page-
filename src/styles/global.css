@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import 'highlight.js/styles/github.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -75,4 +76,185 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Custom MDX/Markdown styling for GitHub-like appearance */
+.prose-custom {
+  line-height: 1.7;
+}
+
+.prose-custom pre {
+  background-color: #f6f8fa;
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+  color: #24292f;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.prose-custom code {
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 85%;
+  padding: 0.2em 0.4em;
+}
+
+.prose-custom pre code {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+.prose-custom blockquote {
+  border-left: 0.25em solid #d1d9e0;
+  color: #656d76;
+  padding-left: 1em;
+}
+
+.prose-custom table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+  width: max-content;
+}
+
+.prose-custom table th,
+.prose-custom table td {
+  border: 1px solid #d1d9e0;
+  padding: 6px 13px;
+}
+
+.prose-custom table th {
+  background-color: #f6f8fa;
+  font-weight: 600;
+}
+
+.prose-custom table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #d1d9e0;
+}
+
+.prose-custom table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+/* Syntax highlighting for code blocks */
+.prose-custom .hljs {
+  background: #f6f8fa;
+  color: #24292f;
+}
+
+.prose-custom .hljs-comment,
+.prose-custom .hljs-quote {
+  color: #6a737d;
+  font-style: italic;
+}
+
+.prose-custom .hljs-keyword,
+.prose-custom .hljs-selector-tag,
+.prose-custom .hljs-subst {
+  color: #d73a49;
+}
+
+.prose-custom .hljs-number,
+.prose-custom .hljs-literal,
+.prose-custom .hljs-variable,
+.prose-custom .hljs-template-variable,
+.prose-custom .hljs-tag .hljs-attr {
+  color: #005cc5;
+}
+
+.prose-custom .hljs-string,
+.prose-custom .hljs-doctag {
+  color: #032f62;
+}
+
+.prose-custom .hljs-title,
+.prose-custom .hljs-section,
+.prose-custom .hljs-selector-id {
+  color: #6f42c1;
+  font-weight: bold;
+}
+
+.prose-custom .hljs-type,
+.prose-custom .hljs-class .hljs-title {
+  color: #d73a49;
+  font-weight: bold;
+}
+
+.prose-custom .hljs-tag,
+.prose-custom .hljs-name,
+.prose-custom .hljs-attribute {
+  color: #22863a;
+  font-weight: normal;
+}
+
+.prose-custom .hljs-regexp,
+.prose-custom .hljs-link {
+  color: #032f62;
+}
+
+.prose-custom .hljs-symbol,
+.prose-custom .hljs-bullet {
+  color: #e36209;
+}
+
+.prose-custom .hljs-built_in,
+.prose-custom .hljs-builtin-name {
+  color: #005cc5;
+}
+
+.prose-custom .hljs-meta {
+  color: #6a737d;
+}
+
+.prose-custom .hljs-deletion {
+  background: #ffeef0;
+}
+
+.prose-custom .hljs-addition {
+  background: #f0fff4;
+}
+
+.prose-custom .hljs-emphasis {
+  font-style: italic;
+}
+
+.prose-custom .hljs-strong {
+  font-weight: bold;
+}
+
+/* Mobile table improvements */
+@media (max-width: 640px) {
+  .prose-custom table {
+    font-size: 0.75rem;
+  }
+
+  .prose-custom table th,
+  .prose-custom table td {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .prose-custom table th {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+}
+
+/* Responsive code blocks */
+@media (max-width: 640px) {
+  .prose-custom pre {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .prose-custom pre code {
+    font-size: 0.75rem;
+  }
 }

@@ -5,6 +5,8 @@ import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
 import { AllLocales } from '@/utils/AppConfig';
+import { DemoBanner } from '@/templates/DemoBanner';
+import { Navbar } from '@/templates/Navbar';
 
 export const metadata: Metadata = {
   icons: [
@@ -57,6 +59,8 @@ export default function RootLayout(props: {
           locale={props.params.locale}
           messages={messages}
         >
+          <DemoBanner />
+          <Navbar />
           {props.children}
 
         </NextIntlClientProvider>

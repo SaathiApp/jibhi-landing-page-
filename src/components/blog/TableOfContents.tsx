@@ -16,14 +16,19 @@ const TableOfContents = ({ headings }: Props) => {
 
   return (
     <nav
-      className="mb-8 rounded-lg bg-gray-50 p-4 lg:sticky lg:top-24 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto border border-slate-200"
+      className="rounded-lg bg-white p-4 sm:p-6 shadow-sm border border-slate-200 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto"
       aria-label="Table of contents"
     >
-      <h2 className="mb-2 text-lg font-semibold text-slate-800">Table of Contents</h2>
-      <ul className="space-y-1 text-slate-700 text-sm">
+      <h2 className="mb-3 sm:mb-4 text-base sm:text-lg font-semibold text-brand-dark border-b border-slate-200 pb-2">
+        Table of Contents
+      </h2>
+      <ul className="space-y-1 sm:space-y-2 text-slate-700 text-xs sm:text-sm">
         {headings.map(h => (
           <li key={h.id} className={getIndent(h.level)}>
-            <a href={`#${h.id}`} className="hover:text-brand-accent">
+            <a
+              href={`#${h.id}`}
+              className="block py-1 text-slate-600 hover:text-brand-accent transition-colors duration-200 hover:font-medium"
+            >
               {h.text}
             </a>
           </li>

@@ -1,8 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 
 const testimonials = [
   {
@@ -10,40 +10,40 @@ const testimonials = [
     city: 'Mumbai',
     quote: 'Random 1 Jibhi planned my 7-day Europe trip in just 5 minutes. I didn’t lift a finger, and the whole journey felt crafted just for me.',
     avatar: '/assets/images/user1.jpg',
-    destinationImage: '/assets/images/dubai.jpg',
-    destinationLabel: 'Dubai',
+    src: '/assets/images/dubai.jpg',
+    designation: 'Dubai',
   },
   {
     name: 'Arjun D.',
     city: 'Dubai',
     quote: 'Random 2 I booked Tokyo in one tap—flights, sushi tour, boutique hotel. My friends still don’t believe it was AI!',
     avatar: '/assets/images/user2.jpg',
-    destinationImage: '/assets/images/japan-1.jpg',
-    destinationLabel: 'Tokyo',
+    src: '/assets/images/japan-1.jpg',
+    designation: 'Tokyo',
   },
   {
     name: 'Sara P.',
     city: 'San Francisco',
     quote: 'Random 3Planning used to stress me out for weeks. Now I just tell Jibhi what I want, and I’m ready to go.',
     avatar: '/assets/images/user3.jpg',
-    destinationImage: '/assets/images/venice.jpg',
-    destinationLabel: 'Venice',
+    src: '/assets/images/venice.jpg',
+    designation: 'Venice',
   },
   {
     name: 'Luca M.',
     city: 'Milan',
     quote: 'Random 4 From gondolas in Venice to mountain hikes in Switzerland, every detail was spot on. Jibhi is my new travel secret!',
     avatar: '/assets/images/user4.jpg',
-    destinationImage: '/assets/images/switzerland.jpg',
-    destinationLabel: 'Switzerland',
+    src: '/assets/images/switzerland.jpg',
+    designation: 'Switzerland',
   },
   {
     name: 'Priya S.',
     city: 'Bangalore',
     quote: 'Random 5 I love how Jibhi took my wish for adventure and turned it into a Swiss Alps escape—no stress, just pure fun.',
     avatar: '/assets/images/user5.jpg',
-    destinationImage: '/assets/images/swiss-2.jpg',
-    destinationLabel: 'Swiss Alps',
+    src: '/assets/images/swiss-2.jpg',
+    designation: 'Swiss Alps',
   },
 ];
 
@@ -132,63 +132,9 @@ export function Testimonials() {
         <h2 className="mb-14 text-center text-4xl font-extrabold tracking-tight text-[#22225a] md:text-5xl">
           What Travelers Say
         </h2>
-        <div
-          ref={scrollRef}
-          className="flex gap-8 overflow-x-auto py-2 md:snap-x  md:snap-mandatory"
-        >
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: i * 0.2 }}
-              className="relative flex w-96 shrink-0 flex-col items-center rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-xl transition hover:shadow-2xl md:snap-center"
-            >
-              <div className="relative mb-4 h-32 w-56 overflow-hidden rounded-2xl shadow">
-                <Image
-                  src={t.destinationImage}
-                  alt={t.destinationLabel}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute bottom-0 w-full rounded-b-2xl bg-black py-1 text-sm font-bold text-white">
-                  {t.destinationLabel}
-                </div>
-              </div>
-              <Image
-                src={t.avatar}
-                alt={t.name}
-                width={56}
-                height={56}
-                className="mb-4 rounded-full border-2 border-[#605CD4]/30 object-cover shadow"
-              />
-              <p className="mb-5 text-base italic text-gray-700">
-                “
-                {t.quote}
-                ”
-              </p>
-              <div className="mt-auto flex items-center justify-center gap-1 text-base font-semibold text-[#605CD4]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="mr-1 inline-block size-4 text-green-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-label="Verified"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 6.293a1 1 0 010 1.414l-6.364 6.364a1 1 0 01-1.414 0l-3.182-3.182a1 1 0 111.414-1.414l2.475 2.475 5.657-5.657a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span>{t.name}</span>
-                <span className="ml-1 text-xs font-medium text-green-500">Verified</span>
-              </div>
-              <div className="text-xs text-gray-500">{t.city}</div>
-            </motion.div>
-          ))}
-        </div>
+       
+        <AnimatedTestimonials testimonials={testimonials} />
+
         <h3 className="mb-10 mt-20 text-center text-2xl font-bold text-[#22225a] md:text-3xl">
           Popular Destinations
         </h3>
